@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from '../Header/header';
 
 class Browse extends Component {
 
@@ -7,6 +8,7 @@ class Browse extends Component {
       <div>
           
         <p>Browse Lessons</p>
+        <Header />
       </div>
     );
   }
