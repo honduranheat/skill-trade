@@ -16,7 +16,7 @@ class UserInput extends React.Component {
                 <label className='header' htmlFor='username'>
                     {this.props.label}
                     </label>
-                    <input id='username' 
+                    <input id='username' />
                 </form>
         )
     }
