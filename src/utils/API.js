@@ -6,4 +6,5 @@ export default {
       console.log('hit api', listingData);
     return axios.post("/api/listings", listingData);
   }
+   
 };

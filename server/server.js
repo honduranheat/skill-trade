@@ -10,8 +10,9 @@ const passport = require('./passport');
 const app = express()
 const PORT = 8080;
 // Route requires
-const user = require('./routes/user')
-
+const user = require('./routes/users')
+const profile = require('./routes/api/profile')
+const listing = require('./routes/api/listing')
 // MIDDLEWARE
 app.use(morgan('dev'))
 app.use(
@@ -37,8 +38,10 @@ app.use(passport.session()) // calls the deserializeUser
 
 
 // Routes
-app.use('/user', user)
-//app.use(routes);
+app.use('/user', user);
+app.use(Profile);
+app.use(Listing);
+
 
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
