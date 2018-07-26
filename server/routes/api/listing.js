@@ -1,39 +1,40 @@
-const express = require('express')
-const router = express.Router()
-const listController = require('../../controllers/listController');
 
-router.post('/', listController.create);
+const express = require('express');
+const router = express.Router();
+const listingController = require('../database/controllers/listingController');
+
+//Route to /listings/:tag
+router.route("/:tag")
+    .get(listingController.getListingByTag);
+
+//route to create a new listing and link it to the person's profile
+router.route("/:userID")
+    .post(listingController.postNewListingByUser);
 
 
-
-// router.post('/logout', (req, res) => {
-//     if (req.user) {
-//         req.logout()
-//         res.send({ msg: 'logging out' })
-//     } else {
-//         res.send({ msg: 'no user to log out' })
-//     }
-// })
-
-// router.post(
-//     '/login',
-//     function (req, res, next) {
-//         console.log('routes/user.js, login, req.body: ');
-//         // console.log(req.body)
-//         next()
-//     },
-//     passport.authenticate('local'),
-//     (req, res) => {
-//         console.log('logged in', req.user);
-//         var userInfo = {
-//             username: req.user.username,
-//             id: req.user._id
-//         };
-//                 // var userId = {id: req.user.id}
-//         res.send(userInfo) //.send(userId);
-//     }
-// )
-
+//route to delete a listing
+router.route("/delete/:id")
+    .delete(listingController.deleteListingByID);
 
 
 module.exports = router;
+
+// const router = require("express").Router();
+// const listingController = require("../../controllers/listingcont");
+
+
+// // Matches with "/api/books"
+// router.route("/")
+//   .get(listingController.findAll)
+//   .post(listingController.create);
+
+// // Matches with "/api/books/:id" 
+// router
+//   .route("/:id")
+//   .get(listingController.findById)
+//   .put(listingController.update)
+//   .delete(listingController.remove);
+
+
+// module.exports = router; 
+

@@ -1,8 +1,6 @@
-
-body {
+/* body {
   font-family: 'Roboto', sans-serif;
 }
-
 
 .App {
   text-align: center;
@@ -12,13 +10,11 @@ body {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
 #navText {
   color: rgb(58, 154, 10);
   font-size: 20px;
   margin: 0 auto;
 }
-
 
 .App-header {
   background-color: #222;
@@ -26,12 +22,10 @@ body {
   padding: 20px;
   color: white;
 }
-
 p {
   color: rgb(145, 18, 9);
   font-size: 50px;
 }
-
 .App-title {
   font-size: 1.5em;
 }
@@ -47,12 +41,26 @@ p {
 
 
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.list-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.listing-text {
+width: 600px;
+
+}
+
+.desc-box {
+  max-height: 250px;
+}
 
 .pages {
   display: flex;
@@ -82,5 +90,4 @@ li {
 .userRanking {
   display: flex;
   justify-content: center;
-}
-
+} */

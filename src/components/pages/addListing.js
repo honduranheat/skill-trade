@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Input, TextArea, FormBtn } from '../Form';
-import API from '../utils/API';
+import API from '../../utils/API';
 
 class Listing extends Component {
 	state = {
@@ -29,13 +29,13 @@ class Listing extends Component {
 			this.state.datesAvailable &&
 			this.state.tags 
 		) {
-			API.saveListing({ 
+			API.saveListing({
 				title: this.state.title,
 				description: this.state.description,
 				duration: this.state.duration,
 				datesAvailable: this.state.datesAvailable,
 				tags: this.state.tags
-			}) 
+			})
 				.then(res => console.log('success'))
 				.catch((err) => console.log("err from saveListing", err));
 		}

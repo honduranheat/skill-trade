@@ -1,6 +1,5 @@
 {
-
-  "name": "simple-mern-passport",
+  "name": "skill-trade",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,13 +21,11 @@
     "react-scripts": "1.1.0",
     "reactstrap": "^6.3.0",
     "spectre.css": "^0.5.0"
-
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-
     "eject": "react-scripts eject",
     "api": "nodemon ./server/server.js",
     "dev": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
@@ -37,6 +34,9 @@
   "devDependencies": {
     "concurrently": "^3.6.0"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "main": "index.js",
+  "repository": "https://github.com/chelsg7/Project3.git",
+  "author": "thorc",
+  "license": "MIT"
 }
-
